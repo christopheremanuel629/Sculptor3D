@@ -1,3 +1,18 @@
+/***
+    UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE
+    CENTRO DE TECNOLOGIA - DEPARTAMENTO DE ENGENHARIA ELÉTRICA
+    PROGRAMAÇÃO AVANÇADA (DCA 0803) - 2024.2
+
+    Docente: Agostinho Brito.
+
+    Autor: Christopher Emanuel de Lima Gomes.
+    Matrícula: 20240012282
+
+
+
+**/
+
+
 #include <iostream>
 #include "sculptor.h"
 #include <cmath>
@@ -95,7 +110,6 @@
 
     }
 
-
     void criarCesto (){
 
         //Cubo do cesto e retidado da parte interna
@@ -162,8 +176,6 @@
         ballon.cutEllipsoid(100, 225, 100, 100,1,100);
         }
 
-
-
      void salvarOFF(const std::string &nomeArquivo) {
         ballon.writeOFF(nomeArquivo);
     }
@@ -174,11 +186,10 @@ int main() {
     meuBalao desenho(600, 600, 600);
 
     desenho.criarEnfeites();
+    desenho.criarMacarico();
     desenho.criarCordas();
     desenho.criarBalao();
     desenho.criarCesto();
-    desenho.criarMacarico();
-
 
     // Salvando o resultado no formato OFF
     desenho.salvarOFF("balloon.off");
